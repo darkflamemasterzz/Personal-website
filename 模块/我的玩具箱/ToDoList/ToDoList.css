@@ -1,0 +1,56 @@
+.List{
+    list-style-type:none;
+    width:600px;
+    padding:0; margin: 16px auto 16px auto;
+}
+
+.List li{
+    font-size:19px; font-weight:300;
+    padding: 10px 0 10px 0;
+    border-bottom:1px solid lightgray;
+    cursor:pointer;
+    height:26px;
+}
+
+.List li:hover{
+    border-color:#DC143C;
+}
+
+#ListTitle{
+    font-size:45px; font-weight:500;
+    border-bottom: 2px solid black;
+    cursor:pointer;
+    height: 60px;
+}
+
+.tickCheck{
+    display:inline-block;
+    width:20px; height:20px;
+    margin-right:20px;
+    background: url("img/TickCheck.png") no-repeat -10px -22px;
+    background-size:40px;
+    /*background: url("img/TickCheck.png") no-repeat -10px 0px;*/
+}
+
+.tickChecked{
+    background: url("img/TickCheck.png") no-repeat -10px 0;
+    background-size:40px;
+}
+
+.temp input{
+    margin-right:10px;
+}
+
+.showTags{
+    background-color:lightgray;
+    width: 300px; height:400px;
+    position:fixed; left:0; top: 100px;
+}
+.tags{
+    color:white;
+    width: 300px; height: 25px;
+    margin-top: 25px;
+}
+.showTags .tag_1{
+    margin-top:50px;
+}

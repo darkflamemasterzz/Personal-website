@@ -1,0 +1,42 @@
+.gradeLine{
+    width:400px;
+}
+
+.gradeLine ul li{
+    list-style-type:none;
+    background: url("../SelectionList/img/RadioButtonFinally.png") no-repeat 0 -20px;
+    background-size:40px;
+    float: left;
+    width: 22px; height: 22px;
+    margin-right: 10px;
+    cursor:pointer;
+    border-bottom:none;
+}
+
+.gradeLine .TimeLineChecked{
+    background: url("../SelectionList/img/RadioButtonFinally.png") no-repeat 0 1px;
+    background-size: 40px;
+}
+
+/*气泡*/
+.bubble{
+    position:relative; top: -45px; left: -68px
+}
+.message{
+    background-color:lightsalmon;
+    color: white;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius:7px;
+
+}
+.tail{
+    width:20px;height:20px;
+    background-color:lightsalmon;
+    transform:rotate(110deg);
+    position:relative; top: -18px; left: 57px;
+    z-index: -1;
+}
+
