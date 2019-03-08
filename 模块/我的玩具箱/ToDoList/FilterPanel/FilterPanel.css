@@ -1,0 +1,75 @@
+#filterPanel{
+    background-color:lightgray;
+    width:600px; height:660px;
+    border: 1px solid white;
+    border-radius:10px;
+}
+#filterPanel #title {
+    font-family:sans-serif;
+    font-weight:bold; font-size:40px;
+    color:white;
+    margin-left:20px;margin-bottom:20px;
+}
+#filterPanel  li{
+    border: 1px solid white; border-radius:10px;
+    width:90px; height:20px;
+    padding: 10px 0 10px 0;
+    float:left;
+    list-style-type:none;
+    margin-right:20px;
+    font-size:15px;
+    color:white;
+    text-align:center;
+    cursor:pointer;
+}
+#filterPanel li:hover{
+    color: lightgray;
+    background-color:white;
+}
+#filterPanel li:nth-child(1):hover{
+    color: white;
+    background-color:transparent;
+}
+#filterPanel li:nth-child(1){
+    width:140px;
+    float:none;
+    border:none;
+    padding: 40px 0 20px 0;
+    margin-left:-20px;
+    color:white;
+    font-weight:bold; font-size:20px;
+    cursor:auto;
+}
+#filterPanel #ORR li:nth-child(1){
+    margin-left: -10px;
+}
+#filterPanel #grade li:nth-child(1){
+    margin-left: -2px;
+}
+
+#filterPanel .button{
+    padding:100px 0 0 40px;
+}
+#filterPanel .button .ok, .cancel{
+    display:inline-block;
+    margin-right:20px;
+    width:90px; height:20px;
+    padding: 10px 0 10px 0;
+    color:white;
+    background-color:#B22222;
+    text-align:center;
+    border: 1px solid white; border-radius: 20px;
+    cursor:pointer;
+}
+#filterPanel .button .ok:hover{
+    color:lightgray;
+    background-color:#8B0000;
+    border:1px solid lightgray;
+}
+#filterPanel .button .cancel{
+    background-color:transparent;
+}
+#filterPanel .button .cancel:hover{
+    color:DarkGray;
+    border:1px solid DarkGray;
+}

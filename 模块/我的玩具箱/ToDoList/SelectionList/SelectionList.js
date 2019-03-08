@@ -1,6 +1,27 @@
 export function chooseDate(selector, completed){
+    console.log("chooseDate work!");
+
 
         var chooseDate = {};
+
+        // 添加骨架
+        chooseDate.build = function(selector){
+            $(selector)
+                .children()
+                .hide()
+                .parent()
+                .append('<div class="timeLine">\n' +
+                    '    <ul>\n' +
+                    '        <li title="今天"></li>\n' +
+                    '        <li title="明天"></li>\n' +
+                    '        <li title="+2"></li>\n' +
+                    '        <li title="+3"></li>\n' +
+                    '        <li title="+4"></li>\n' +
+                    '        <li title="+5"></li>\n' +
+                    '        <li title="+6"></li>\n' +
+                    '    </ul>\n' +
+                    '</div>');
+        };
 
         // 提示气泡
         chooseDate.bubbles = function(selector){
@@ -51,20 +72,21 @@ export function chooseDate(selector, completed){
                 '+6': 6,
             }
             currentDate.setTime($(selector).data('OriginTime') + dayGone[$(selector).attr('title')] * 86400000);
-            /*// 目标年
+            // 目标年
             console.log(currentDate.getFullYear());
             // 目标月
             console.log(currentDate.getMonth());
             // 目标日
             console.log(currentDate.getDate());
             // 目标星期
-            console.log(currentDate.getDay());*/
+            console.log(currentDate.getDay());
 
             return currentDate;
         };
 
 
     // 调用函数
+    chooseDate.build('.temp');
     chooseDate.bubbles('.timeLine li');
     $('.timeLine li').click(function(){
         $('.timeLine li').data('date', chooseDate.Date(this));

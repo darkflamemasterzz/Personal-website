@@ -2,6 +2,23 @@ export function chooseField(selector, completed){
     $('document').ready(function(){
         var chooseField = {};
 
+        // 添加骨架
+        chooseField.build = function(selector){
+            $(selector)
+                .children()
+                .hide()
+                .parent()
+                .append('<div class="fieldLine">' +
+                    '    <ul>' +
+                    '        <li title="学习"></li>' +
+                    '        <li title="日常生活"></li>' +
+                    '        <li title="修理、整理"></li>' +
+                    '        <li title="义务、任务"></li>' +
+                    '        <li title="娱乐"></li>' +
+                    '    </ul>'                    +
+                    '</div>');
+        };
+
         // 提示气泡
         chooseField.bubbles = function(selector){
             $(selector).hover(function(){
@@ -41,6 +58,7 @@ export function chooseField(selector, completed){
         };
 
         // 调用函数
+        chooseField.build('.temp');
         chooseField.bubbles('.fieldLine li');
         $('.fieldLine li').click(function(){
             chooseField.Data(this);

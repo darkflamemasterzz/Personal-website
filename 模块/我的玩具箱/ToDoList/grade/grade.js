@@ -2,6 +2,22 @@ export function chooseGrade(completed){
 
         var chooseGrade = {};
 
+        // 添加骨架
+        chooseGrade.build = function(selector){
+            $(selector)
+                .children()
+                .hide()
+                .parent()
+                .append('<div class="gradeLine">' +
+                    '    <ul>' +
+                    '        <li title="重要紧急"></li>' +
+                    '        <li title="重要不紧急"></li>' +
+                    '        <li title="不重要紧急"></li>' +
+                    '        <li title="不重要不紧急"></li>' +
+                    '    </ul>'                    +
+                    '</div>');
+        };
+
         // 提示气泡
         chooseGrade.bubbles = function(selector){
             $(selector).hover(function(){
@@ -40,6 +56,7 @@ export function chooseGrade(completed){
         };
 
         // 调用函数
+        chooseGrade.build('.temp');
         chooseGrade.bubbles('.gradeLine li');
         $('.gradeLine li').click(function(){
             chooseGrade.Data(this);
